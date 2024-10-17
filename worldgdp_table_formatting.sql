@@ -232,3 +232,92 @@ FROM world_gdp
 -- removing row 1 as it is not needed anymore after changing the headers
 DELETE FROM world_gdp
 WHERE Country = 'Country Name';
+
+
+-- removing row labelled 'not classified' as it is empty
+DELETE FROM world_gdp
+WHERE Country = 'Not classified';
+
+
+-- changing wide format to long format
+SELECT Country,
+	2007 as Year,
+    `2007` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2008 as Year,
+    `2008` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2009 as Year,
+    `2009` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2010 as Year,
+    `2010` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2011 as Year,
+    `2011` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2012 as Year,
+    `2012` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2013 as Year,
+    `2013` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2014 as Year,
+    `2014` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2015 as Year,
+    `2015` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2016 as Year,
+    `2016` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2017 as Year,
+    `2017` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2018 as Year,
+    `2018` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2019 as Year,
+    `2019` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2020 as Year,
+    `2020` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2021 as Year,
+    `2021` as GDP
+FROM world_gdp
+UNION ALL
+SELECT Country,
+	2022 as Year,
+    `2022` as GDP
+FROM world_gdp
+ORDER BY Country, Year
+;
