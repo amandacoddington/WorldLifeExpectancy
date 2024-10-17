@@ -1,6 +1,7 @@
 -- World Life Expectancy 2007-2022 Exploratory Data Analysis
 SELECT * 
 FROM world_life_expectancy
+WHERE Country = 'United States of America'
 ;
 
 
