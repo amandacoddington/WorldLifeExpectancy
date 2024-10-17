@@ -7,7 +7,7 @@ SQL files for the World Life Expectancy portfolio project
 This project aims to analyze global life expectancy data to identify trends, disparities, and influencing factors across different regions and populations.
 
 **Methodology:**  
-Using a comprehensive dataset sourced from reputable organizations such as the World Health Organization (WHO) and the World Bank, we will perform statistical analyses to examine life expectancy figures across various countries. The analysis will include:
+Using a comprehensive dataset sourced from reputable organizations such as the World Health Organization (WHO) and the World Bank, I will perform statistical analyses to examine life expectancy figures across various countries. The analysis will include:
 
 1. **Descriptive Statistics:** Summary of average life expectancies, ranges, and distributions.
 2. **Comparative Analysis:** Cross-country comparisons to highlight disparities based on geographic, economic, and social factors.
