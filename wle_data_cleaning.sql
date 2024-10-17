@@ -1,3 +1,4 @@
+-- World Life Expectancy 2007-2022 Data Cleaning
 SELECT *
 FROM world_life_expectancy;
 
