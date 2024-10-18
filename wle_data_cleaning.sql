@@ -408,3 +408,56 @@ SELECT *
 FROM world_life_expectancy
 WHERE Country LIKE '%Slov%'
 ;
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'The former Yugoslav republic of Macedonia', 'North Macedonia')
+WHERE Country = 'The former Yugoslav republic of Macedonia'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Mace%'
+;
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'United Republic of Tanzania', 'Tanzania')
+WHERE Country = 'United Republic of Tanzania'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Tanz%'
+;
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Venezuela (Bolivarian Republic of)', 'Venezuela, RB')
+WHERE Country = 'Venezuela (Bolivarian Republic of)'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Venez%'
+;
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Yemen', 'Yemen, Rep.')
+WHERE Country = 'Yemen'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Yem%'
+;
+
+-- rejoining world_gdp to world_life_expectancy after standardizing country names
+SELECT wle.Country, wle.Year, Status, gdp.GDP, `Life Expectancy`, `Adult Mortality`, BMI, Measles, Polio, Diphtheria, `HIV/AIDS`
+FROM world_life_expectancy AS wle 
+JOIN world_gdp AS gdp
+    ON wle.Country = gdp.Country
+    AND wle.Year = gdp.Year
+ORDER BY wle.Country, gdp.Year
+;
