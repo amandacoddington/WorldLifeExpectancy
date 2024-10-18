@@ -33,33 +33,20 @@ The results will be valuable for public health officials, policymakers, research
 
 ***Columns***
 
-Country - *country name*
-
-Year - *year*
-
-Status - *developed or developing country status*
-
-Population - *population of country*
-
-GDP - *gross domestic product, the measure of the total value of all goods and services produced in a country over one year*
-
-HealthExpenditure - *percentage of a country's GDP spent on healthcare*
-
-AdultMortality - *probability of dying between 15 and 60 years-old per 1,000 of country's population*
-
-InfantDeaths - *number of infant deaths per 1,000 of country's population*
-
-BMI - *average body mass index of country*
-
-Measles -
-
-Diphtheria -
-
-Polio -
-
-HIV_AIDs - 
-
-Education - 
+Country - *country name*  
+Year - *year*  
+Status - *developed or developing country status*  
+Population - *population of country*  
+GDP - *gross domestic product, the measure of the total value of all goods and services produced in a country over one year*  
+HealthExpenditure - *percentage of a country's GDP spent on healthcare*  
+AdultMortality - *probability of dying between 15 and 60 years-old per 1,000 of country's population*  
+InfantDeaths - *number of infant deaths per 1,000 of country's population*  
+BMI - *average body mass index of country*  
+Measles -  
+Diphtheria -  
+Polio -  
+HIV_AIDs -   
+Education -   
 
 
 ***Citations***
