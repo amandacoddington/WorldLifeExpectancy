@@ -465,3 +465,77 @@ JOIN population AS p
     AND wle.Year = p.Year
 ORDER BY wle.Country, gdp.Year
 ;
+
+
+SELECT *
+FROM world_life_expectancy;
+
+-- removing HIV/AIDs & Measles columns because information is incorrect
+ALTER TABLE world_life_expectancy
+DROP COLUMN `HIV/AIDS`;
+
+ALTER TABLE world_life_expectancy
+DROP COLUMN Measles;
+
+-- removing the following columns as they will not be used in this project
+ALTER TABLE world_life_expectancy
+DROP COLUMN `thinness  1-19 years`;
+
+ALTER TABLE world_life_expectancy
+DROP COLUMN `thinness 5-9 years`;
+
+ALTER TABLE world_life_expectancy
+DROP COLUMN Schooling;
+
+SELECT *
+FROM world_life_expectancy;
+
+
+-- standardizing column names
+ALTER TABLE world_life_expectancy
+RENAME COLUMN `Life expectancy` to LifeExpectancy;
+
+ALTER TABLE world_life_expectancy
+RENAME COLUMN `Adult Mortality` to AdultMortality;
+
+ALTER TABLE world_life_expectancy
+RENAME COLUMN `infant deaths` to InfantDeaths;
+
+ALTER TABLE world_life_expectancy
+RENAME COLUMN `percentage expenditure` to HealthExpenditure;
+
+ALTER TABLE world_life_expectancy
+RENAME COLUMN `under-five deaths` to UnderFiveDeaths;
+
+
+-- joining world_gdp, population, measles, and HIV to world_life_expectancy
+SELECT w.Country, 
+    w.Year, 
+    Status, 
+    LifeExpectancy,
+    p.Population, 
+    g.GDP, 
+    HealthExpenditure,
+    AdultMortality,
+    InfantDeaths,
+    UnderFiveDeaths,
+    BMI,
+    m.Measles,
+    Diphtheria,
+    Polio,
+    h.HIV
+FROM world_life_expectancy AS w 
+JOIN world_gdp AS g
+    ON w.Country = g.Country
+    AND w.Year = g.Year
+JOIN population AS p 
+    ON w.Country = p.Country
+    AND w.Year = p.Year
+JOIN measles AS m
+    ON w.Country = m.Country
+    AND w.Year = m.Year 
+JOIN hiv AS h 
+    ON w.Country = h.Country
+    AND w.Year = h.Year
+ORDER BY w.Country, g.Year
+;
