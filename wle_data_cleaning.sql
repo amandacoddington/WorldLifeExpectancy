@@ -453,11 +453,15 @@ FROM world_life_expectancy
 WHERE Country LIKE '%Yem%'
 ;
 
--- rejoining world_gdp to world_life_expectancy after standardizing country names
-SELECT wle.Country, wle.Year, Status, gdp.GDP, `Life Expectancy`, `Adult Mortality`, BMI, Measles, Polio, Diphtheria, `HIV/AIDS`
+-- joining world_gdp & population to world_life_expectancy
+SELECT wle.Country, wle.Year, Status, gdp.GDP, p.Population,
+    `Life Expectancy`, `Adult Mortality`, BMI, Measles, Polio, Diphtheria, `HIV/AIDS`
 FROM world_life_expectancy AS wle 
 JOIN world_gdp AS gdp
     ON wle.Country = gdp.Country
     AND wle.Year = gdp.Year
+JOIN population AS p 
+    ON wle.Country = p.Country
+    AND wle.Year = p.Year
 ORDER BY wle.Country, gdp.Year
 ;
