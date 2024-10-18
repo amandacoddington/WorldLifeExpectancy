@@ -157,3 +157,254 @@ SELECT *
 FROM world_life_expectancy
 WHERE `Life expectancy` = ''
 ;
+
+
+-- removing GDP column because information is incorrect
+ALTER TABLE world_life_expectancy
+DROP COLUMN GDP;
+
+
+-- joining world_gdp table (this is correct GDP from the World Bank) 
+SELECT wle.Country, wle.Year, Status, gdp.GDP, `Life Expectancy`
+FROM world_life_expectancy AS wle 
+JOIN world_gdp AS gdp
+    ON wle.Country = gdp.Country
+    AND wle.Year = gdp.Year
+ORDER BY wle.Country, gdp.Year
+;
+
+-- standardizing Country names between world life expectancy & world gdp tables to ensure accurate join 
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'United States of America', 'United States')
+WHERE Country = 'United States of America'
+;
+
+-- checking work
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%United%'
+;
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'United Kingdom of Great Britain and Northern Ireland', 'United Kingdom')
+WHERE Country = 'United Kingdom of Great Britain and Northern Ireland'
+;
+
+-- checking work
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%United%'
+;
+
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country,'Republic of Korea','Korea, Rep.')
+WHERE Country = 'Republic of Korea'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Korea%'
+;
+
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country,'Democratic People''s Republic of Korea','Korea, Dem. People''s Rep.')
+WHERE Country = 'Democratic People''s Republic of Korea'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Korea%'
+;
+
+
+-- changing 'Bahamas' in world life expectancy table to match world gdp table
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Bahamas', 'Bahamas, The')
+WHERE Country = 'Bahamas'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Bahamas%'
+;
+
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Bolivia (Plurinational State of)', 'Bolivia')
+WHERE Country = 'Bolivia (Plurinational State of)'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Bolivia%'
+;
+
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Côte d''Ivoire', 'Cote d''Ivoire')
+WHERE Country = 'Côte d''Ivoire'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Cote%'
+;
+
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Congo', 'Congo, Rep.')
+WHERE Country = 'Congo'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Congo%'
+;
+
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Congo', 'Congo, Rep.')
+WHERE Country = 'Congo'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Congo%'
+;
+
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Democratic Republic of the Congo', 'Congo, Dem. Rep.')
+WHERE Country = 'Democratic Republic of the Congo'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Cz%'
+;
+
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Egypt', 'Egypt, Arab Rep.')
+WHERE Country = 'Egypt'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Egypt%'
+;
+
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Gambia', 'Gambia, The')
+WHERE Country = 'Gambia'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Gambia%'
+;
+
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Iran (Islamic Republic of)', 'Iran, Islamic Rep.')
+WHERE Country = 'Iran (Islamic Republic of)'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Iran%'
+;
+
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Kyrgyzstan', 'Kyrgyz Republic')
+WHERE Country = 'Kyrgyzstan'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Kyrgyz%'
+;
+
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Lao People''s Democratic Republic', 'Lao PDR')
+WHERE Country = 'Lao People''s Democratic Republic'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Lao%'
+;
+
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Micronesia (Federated States of)', 'Micronesia, Fed. Sts.')
+WHERE Country = 'Micronesia (Federated States of)'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Micro%'
+;
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Republic of Moldova', 'Moldova')
+WHERE Country = 'Republic of Moldova'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Moldova%'
+;
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Saint Lucia', 'St. Lucia')
+WHERE Country = 'Saint Lucia'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Lucia%'
+;
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Saint Vincent and the Grenadines', 'St. Vincent and the Grenadines')
+WHERE Country = 'Saint Vincent and the Grenadines'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Vincent%'
+;
+
+
+UPDATE world_life_expectancy
+SET Country = REPLACE(Country, 'Slovakia', 'Slovak Republic')
+WHERE Country = 'Slovakia'
+;
+
+SELECT *
+FROM world_life_expectancy
+WHERE Country LIKE '%Slov%'
+;
