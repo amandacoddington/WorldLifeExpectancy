@@ -40,6 +40,7 @@ GDP - *gross domestic product, the measure of the total value of all goods and s
 HealthExpenditure - *percentage of a country's GDP spent on healthcare*  
 AdultMortality - *probability of dying between 15 and 60 years-old per 1,000 of country's population*  
 InfantDeaths - *number of infant deaths per 1,000 of country's population*  
+Under5Deaths - *number of under-5-years deaths per 1,000 of country's population*  
 BMI - *average body mass index of country*  
 Measles - *percentage of measles immunization coverage among 1-2 year-olds*  
 Diphtheria - *percentage of diphtheria tetanus toxid and pertussis immunization coverage among 1 year-olds*  
