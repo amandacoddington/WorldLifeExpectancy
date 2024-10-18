@@ -26,3 +26,28 @@ The findings will inform public health initiatives and policy decisions aimed at
 
 **Target Audience:**  
 The results will be valuable for public health officials, policymakers, researchers, and organizations focused on global health and development.
+
+### Data Information
+
+**Columns:**
+Country - *country name*
+Year - *year*
+Status - *developed or developing country status*
+Population - *population of country*
+GDP - *gross domestic product, the measure of the total value of all goods and services produced in a country over one year*
+HealthExpenditure - *percentage of a country's GDP spent on healthcare*
+AdultMortality - *probability of dying between 15 and 60 years-old per 1,000 of country's population*
+InfantDeaths - *number of infant deaths per 1,000 of country's population*
+BMI - *average body mass index of country*
+Measles -
+Diphtheria -
+Polio -
+HIV_AIDs - 
+Education - 
+
+**Citations**
+World Bank Group. (2022). *Population, total* [Data set]. (https://data.worldbank.org/indicator/SP.POP.TOTL?end=2007&start=2004)
+
+World Bank Group. (2022) *GDP (current US$)* [Data set]. (https://data.worldbank.org/indicator/NY.GDP.MKTP.CD)
+
+Analyst Builder. (n.d.) *World Life Expectancy Data Cleaning* [Data set]. (https://cdn-prd.analystbuilder.com/7de487e2-b237-4c27-80e3-501cc4cc167d/WorldLifeExpectancy.json)
