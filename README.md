@@ -31,8 +31,7 @@ The results will be valuable for public health officials, policymakers, research
 
 ### Data Information
 
-***Columns***
-
+***Columns***  
 Country - *country name*  
 Year - *year*  
 Status - *developed or developing country status*  
@@ -49,10 +48,7 @@ HIV_AIDs -
 Education -   
 
 
-***Citations***
-
-World Bank Group. (2022). *Population, total* [Data set]. (https://data.worldbank.org/indicator/SP.POP.TOTL?end=2007&start=2004)
-
-World Bank Group. (2022) *GDP (current US$)* [Data set]. (https://data.worldbank.org/indicator/NY.GDP.MKTP.CD)
-
+***Citations***  
+World Bank Group. (2022). *Population, total* [Data set]. (https://data.worldbank.org/indicator/SP.POP.TOTL?end=2007&start=2004)  
+World Bank Group. (2022) *GDP (current US$)* [Data set]. (https://data.worldbank.org/indicator/NY.GDP.MKTP.CD)  
 Analyst Builder. (n.d.) *World Life Expectancy Data Cleaning* [Data set]. (https://cdn-prd.analystbuilder.com/7de487e2-b237-4c27-80e3-501cc4cc167d/WorldLifeExpectancy.json)
