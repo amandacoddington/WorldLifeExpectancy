@@ -35,7 +35,7 @@ The results will be valuable for public health officials, policymakers, research
 Country - *country name*  
 Year - *year*  
 Status - *developed or developing country status*  
-LifeExpectancy -  
+LifeExpectancy - *life expectancy in years*
 Population - *population of country*  
 GDP - *gross domestic product, the measure of the total value of all goods and services produced in a country over one year*  
 HealthExpenditure - *percentage of a country's GDP spent on healthcare*  
