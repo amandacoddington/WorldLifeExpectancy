@@ -27,9 +27,11 @@ The findings will inform public health initiatives and policy decisions aimed at
 **Target Audience:**  
 The results will be valuable for public health officials, policymakers, researchers, and organizations focused on global health and development.
 
+-------------------------------------------------------------------------------
+
 ### Data Information
 
-**Columns:**
+***Columns***
 
 Country - *country name*
 
@@ -60,7 +62,8 @@ HIV_AIDs -
 Education - 
 
 
-**Citations**
+***Citations***
+
 World Bank Group. (2022). *Population, total* [Data set]. (https://data.worldbank.org/indicator/SP.POP.TOTL?end=2007&start=2004)
 
 World Bank Group. (2022) *GDP (current US$)* [Data set]. (https://data.worldbank.org/indicator/NY.GDP.MKTP.CD)
