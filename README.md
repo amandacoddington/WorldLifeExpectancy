@@ -50,7 +50,7 @@ HIV - *cases of HIV ages 15-49 per 1,000 uninfected population ages 15-49*
 ***Citations***  
 
 Analyst Builder. (n.d.) *World Life Expectancy Data Cleaning* [Dataset]. (https://cdn-prd.analystbuilder.com/7de487e2-b237-4c27-80e3-501cc4cc167d/WorldLifeExpectancy.json)  
-World Bank Group. (2022) *GDP (current US$)* [Dataset]. (https://data.worldbank.org/indicator/NY.GDP.MKTP.CD)  
-World Bank Group. (). *Immunization, measles (% of children ages 12-23 months)* [Dataset]. (https://data.worldbank.org/indicator/SH.IMM.MEAS)  
-World Bank Group. (). *Incidence of HIV, ages 15-49 (per 1,000 uninfected population ages 15-49)* [Dataset]. (https://data.worldbank.org/indicator/SH.HIV.INCD.ZS?end=2015&start=1990)  
-World Bank Group. (2022). *Population, total* [Dataset]. (https://data.worldbank.org/indicator/SP.POP.TOTL?end=2007&start=2004)  
+World Bank Group. (2024) *GDP (current US$)* [Dataset]. (https://data.worldbank.org/indicator/NY.GDP.MKTP.CD)  
+World Bank Group. (2024). *Immunization, measles (% of children ages 12-23 months)* [Dataset]. (https://data.worldbank.org/indicator/SH.IMM.MEAS)  
+World Bank Group. (2024). *Incidence of HIV, ages 15-49 (per 1,000 uninfected population ages 15-49)* [Dataset]. (https://data.worldbank.org/indicator/SH.HIV.INCD.ZS?end=2015&start=1990)  
+World Bank Group. (2024). *Population, total* [Dataset]. (https://data.worldbank.org/indicator/SP.POP.TOTL?end=2007&start=2004)  
