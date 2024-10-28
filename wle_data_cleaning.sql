@@ -519,7 +519,7 @@ WHERE Country <> ''
 SELECT * FROM world_life_expectancy;
 
 
--- joining world_gdp, population, measles, and HIV to world_life_expectancy
+-- joining world_gdp, population, health expenditure, measles, and HIV tables to world_life_expectancy table
 SELECT w.Country, 
     w.Year, 
     Status, 
@@ -555,8 +555,6 @@ ORDER BY w.Country, g.Year
 ;
 
 
---updating table
-UPDATE world_life_expectancy
 
 
 
