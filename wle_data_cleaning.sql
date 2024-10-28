@@ -508,6 +508,12 @@ ALTER TABLE world_life_expectancy
 RENAME COLUMN `under-five deaths` to UnderFiveDeaths;
 
 
+-- dropping HealthExpenditure column because information is incorrect
+ALTER TABLE world_life_expectancy_raw
+DROP COLUMN HealthExpenditure;
+
+SELECT * FROM world_life_expectancy_raw;
+
 -- joining world_gdp, population, measles, and HIV to world_life_expectancy
 SELECT w.Country, 
     w.Year, 
@@ -515,7 +521,7 @@ SELECT w.Country,
     LifeExpectancy,
     p.Population, 
     g.GDP, 
-    HealthExpenditure,
+    he.HealthExpenditure,
     AdultMortality,
     InfantDeaths,
     UnderFiveDeaths,
@@ -537,5 +543,13 @@ JOIN measles AS m
 JOIN hiv AS h 
     ON w.Country = h.Country
     AND w.Year = h.Year
+JOIN healthexpenditure AS he
+    ON w.Country = he.Country
+    AND w.Year = he.Year
 ORDER BY w.Country, g.Year
 ;
+
+
+-- formatting values in measles, diphtheria, and polio columns as percentages
+
+
